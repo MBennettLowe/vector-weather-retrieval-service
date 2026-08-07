@@ -83,10 +83,10 @@ CREATE INDEX IF NOT EXISTS idx_weather_embeddings_ivfflat
 
 def _connection_kwargs():
     return {
-        "host": os.environ.get("LAKEBASE_HOST", "localhost"),
+        "host": os.environ.get("LAKEBASE_HOST", "postgresql://mbennettlowe%40gmail.com@ep-super-hall-d8n77cdz.database.us-east-2.cloud.databricks.com/databricks_postgres?sslmode=require"),
         "port": os.environ.get("LAKEBASE_PORT", "5432"),
-        "dbname": os.environ.get("LAKEBASE_DB", "lakebase"),
-        "user": os.environ.get("LAKEBASE_USER", "lakebase_user"),
+        "dbname": os.environ.get("LAKEBASE_DB", "vector-weather-retrieval-service"),
+        "user": os.environ.get("LAKEBASE_USER", "mbennettlowe@gmail.com"),
         "password": os.environ.get("LAKEBASE_PASSWORD", ""),
     }
 
